@@ -51,7 +51,9 @@ if(user.avatar_path){
                 <span className="mr-2">
                   {$imagePreview}
                 </span>
-                <span href="" style={{fontWeight: 'bold'}}>{user.username}<br />{user.email}</span>
+                <span href="" style={{fontWeight: 'bold'}}>{user.username}<br />{user.email}</span><br />
+                <span href="" style={{fontWeight: 'bold'}}>{user.gender} {user.relationship}</span><br />
+                <span href="" style={{fontWeight: 'bold'}}>{user.bio}</span>
               </span>
               </CardTitle>
             </CardBody>

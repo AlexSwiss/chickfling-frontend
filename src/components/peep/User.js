@@ -1,16 +1,29 @@
 import React from 'react'
 import Moment from 'react-moment';
 import { useSelector } from 'react-redux'
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import { CardText, CardBody, CardTitle } from 'reactstrap';
+import Card from '@material-ui/core/Card';
+import { makeStyles } from '@material-ui/core/styles';
+
+
 
 import './Posts.css';
 import Default from '../../Assets/default.png'
 import EditPost from './EditPost';
 import DeletePost from './DeletePost'
 
+const useStyles = makeStyles((theme) => ({
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  }
+}));
 
 
 const User = ({ user }) => {
+  const classes = useStyles();
+
 
   const currentState = useSelector(state => state)
   const authID = currentState.Auth.currentUser ? currentState.Auth.currentUser.id : ""
@@ -23,7 +36,7 @@ const User = ({ user }) => {
   }
   
   return (
-    <Card className="style-card-main">
+    <Card className={classes.card}>
       <CardBody className="style-card-body">
       <CardTitle>
         <span>

@@ -89,7 +89,6 @@ const Navigation = () => {
 
   return (
     <div className="mb-3">
-    <div style={{"textAlign": "center"}}> Developed with <span role="img"> ❤️ </span> by <a className="link-style"  href="https://twitter.com/CodedFingers" target="_blank">@CodedFingers</a></div>
       <Navbar color="light" light expand="md"> 
         <NavbarBrand className="mx-auto" href="/"><span style={{ fontWeight: "bold"}}>ChickFling</span></NavbarBrand>
         
